@@ -138,7 +138,9 @@ const Dashboard = () => {
             Sign Out
           </button>
         </div>
-
+        {stopwatchRunning && (
+          <p style={styles.elapsedTime}>Elapsed Time: {formatTime(elapsedTime)}</p>
+        )}
         <div style={styles.section}>
           <button style={styles.button} onClick={handleToggleStopwatch}>
             {stopwatchRunning ? "Stop Stopwatch" : "Start Stopwatch"}
